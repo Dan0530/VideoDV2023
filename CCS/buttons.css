@@ -1,0 +1,32 @@
+.button {
+/*border: 10px solid green; /*borde botnes -CAMBIA todos los botones, pero no play*/
+    inline-size: 60px; /*ancho horizontal medida*/
+    block-size: 60px; /*eje vertical medida*/
+    border: none; /*No Bordes*/
+    background-color: transparent; /*sin color none ò unset ò transparent*/
+    background-repeat: no-repeat; /*no repetir imagen del boton*/
+    background-position: center; /*centrar imagen boton*/
+/*LOS BOTONES COBRAN VIDA CON JS.........................IMPORTANTE*/
+    cursor: pointer; /*manito al seleccionar buttons*/
+}
+ 
+.button:active {/*seudo clase */
+    transform:scale(.9); /*al presionar cambia el tamaño el button al dar click*/
+}
+#play {
+    background-image: url('../images/play.svg');
+
+/*border: 10px solid blue; /*solo cambia el color del boton play*/
+}
+
+#pause {
+    background-image: url('../images/pause.svg'); /*agregar imagenes a los botones*/
+}
+#backward {
+    background-image: url('../images/-10.svg');
+
+}
+#forward {
+    background-image: url('../images/+10.svg');
+
+}       

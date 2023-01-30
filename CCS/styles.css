@@ -1,0 +1,76 @@
+@import './buttons.css'; /*IMPORTAR UNA HOJA DE ESTILO DENTRO DE ESTA HOJA DESTILO -
+ EXCLUSIVA PARA LOS BOTONES*/
+
+/*COMO SE VA VER EL DOCUMENTO*/
+
+body { /*SELECTOR DE ETIQUETA*/
+background-color: cyan;   /*COLOR DE FONTO PAGINA WEB*/
+font-family: Arial, Helvetica, sans-serif; /*FUENTE ESTILO PAGINA WEB*/
+}
+
+.wrapper{
+    max-inline-size: 900px; /*MAXIMO */
+    margin: auto;
+}
+
+.player{
+    margin-block-start:  100px;
+    /*border: 10px solid red;*/
+    position: relative;     
+    
+    
+
+}
+.player video {
+    inline-size: 100%; /*SE AJUSTA A LA HOJA DE LA WEB*/
+                        /*border: 7px solid red*/
+    aspect-ratio: 16/9 ; /*SIEMPRE MANTEGA LA RELACION DE ASPECTO no salte*/
+    vertical-align: middle; /*se alinea verticalmente sin espacions el video en el margen*/
+    object-fit: cover; /*imagen se expande manera proporcional*/
+
+}
+
+.player-title {         /*MUSICA PARA PROGRAMAR TITULO*/
+    Color: white;
+    position: absolute;
+    inset-block-start: 10px;
+    margin-inline-start: 20px;
+
+}
+.player-actions {       /*BOTONES DE VIDEO*/
+    position: absolute;
+    inset:0;    
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /*espacion entre los botones*/
+    /*z-index: 2; /*PARA ACTIVAR BOTONES O COLOCAR VIDEO ID"VIDEO POSTER" AL INICIO DESPUES DE CLASS PLAYER */
+
+}
+
+.player-progress {
+/*background: yellow;*/
+position: absolute; /*envima del video*/
+inset-block-end: 0; /*parte inferior de video*/
+inset-inline: 0; /*barra de avance se expanda por el video*/
+display: flex; /*controlador flexible expandir la barra de avance*/
+padding: 20px; /*centrada*/
+
+
+}
+
+.player-progress input {
+flex: 1; /*controlador flexible expandir la barra de avance*/
+}
+ 
+.player-overlay { /*AL COLOCAR EL PUNTERO NO SE VEAN BOTONES*/
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: .3s opacity; /*botones aparecen en 0.3 segundos*/
+}
+
+.player:hover .player-overlay { /*AL COLOCAR EL PUNTERO NO SE VEAN BOTONES*/
+    opacity: 1;
+
+}
